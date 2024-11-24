@@ -6,16 +6,18 @@ Here are some common challenges you might encounter:
 (1) Cannot visualize a gene's association with multiple pathways affectively:
 PPI%2Bcoexpression_example1.png
 (2) Cannot cluster based on the similarity of pathways:
-Below is a plot drawed by R, I hope to separate the gene class A and class B into the right and left of the panel respectively. Then, clustering them based on the similarity of pathway, but there are always overlape when the gene count is huge. This is due to the cluster method a used is based on Jaccard similarity, that is length(intersect(x, y)) / length(union(x, y)). Therefore, it could consider the semantic information. For example, there are total 5 pathway, the Jaccard value of gene A which belongs to pathwayA and pathwayB and gene B which belongs to pathwayC and pathwayD. Their Jaccard values are equal. If this problem can be solved, may be we can develop a plugin like Cluego in Cytoscape. Cluego can cluster same single pathway or a gene belongs to multiple pathway but using it need a license which abtaining page has been unwork. 
+In the eample below, creating using R, I aim to separate gene classes A and B into the right and left sides of the panel, respectively, and then cluster them based on pathway similarity. However, overlaping often occuers when dealing with a large number of genes. This is due to the cluster method used relies on Jaccard similarity, defined as length(intersect(x, y)) / length(union(x, y)). While effective for some cases, it does not account for semantic information. For example, if there are five pathways, the Jaccard similarity value for gene A (associated with pathways A and B) and gene B(associated with Pathways C and D) might be the same. Their Jaccard values are equal. Addressing this limitation could pave the way for a plugin like ClueGO in Cytoscape. While ClueGO can handle such cases, it requires a license, and its licensing page has become inaccessible.
 PPI%2Bcoexpression_example2.png
-(3) Manually adjusting the chart is too tiring, and you need to redo it when you have new data.
-Just like this, when I was adjusting it for the second version, I felt eye pain, so the flag "I love automation" came again!
+(3) Manually adjusting the chart is time-consuming and error-prone, especially when new data requires redoing the visualization.
+when I was adjusting the plot for the second version, it casued significant eye strain, reigniting my desire for automation! 
 PPI%2Bcoexpression_example3.png
-(4) The protein protein interaction and pathway note are different source or you want to add some new such as co expression. For instance, this plot require cluster through PPI firstly, then annotating each cluster though pathway enrichment analysis. 
-PPI%2Bcoexpression_example3.png
-
-Here it something I hope to help you solve~
-(1) mark multiple pathways which a gene belong as difffernt blocks of a bar represent the multiple pathways this gene belong
-(2) noting gene class as the bold edge represent classA while general edge represent classB
-(3) noting different interaction, like "--" represent PPI, ':'represent coexpression, and "——" represent PPI_coexpression.
+(4) PPI data and pathway annotations often come from different sources, and integrating them can be challenging. For instance, creating the plot below required clustering based on PPI first, followed by annotating each cluster though pathway enrichment analysis. Therefore, you can't perform PPI&coexpression and gene enrichment analysis separately, nor can you customize the input data. 
 PPI%2Bcoexpression_example4.png
+Here it something I hope to help you solve~
+(1) Represent a gene's association with multiple pathways as different blocks in a bar chart, where each block corresponds to one pathway.
+(2) Distinguish gene classes by edge style: use bold edges for Class A genes and general edges for Class B genes.
+(3) Use different line styles to represent interaction types:
+Dashed lines (--) for PPI.
+Dotted lines (:) for co-expression.
+Solid lines (——) for combined PPI and co-expression.
+PPI%2Bcoexpression_example5.png
