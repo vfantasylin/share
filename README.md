@@ -4,7 +4,7 @@ There are many scripts available for visualizing protein-protein interaction (PP
 
 Here are some common challenges you might encounter:
 (1) Cannot visualize a gene's association with multiple pathways affectively:
-PPI%2Bcoexpression_example1.png
+[PPI_coexpression_example1.png]https://github.com/vfantasylin/share/blob/main/PPI_coexpression_example/PPI_coexpression_example1.png
 (2) Cannot cluster based on the similarity of pathways:
 In the eample below, creating using R, I aim to separate gene classes A and B into the right and left sides of the panel, respectively, and then cluster them based on pathway similarity. However, overlaping often occuers when dealing with a large number of genes. This is due to the cluster method used relies on Jaccard similarity, defined as length(intersect(x, y)) / length(union(x, y)). While effective for some cases, it does not account for semantic information. For example, if there are five pathways, the Jaccard similarity value for gene A (associated with pathways A and B) and gene B(associated with Pathways C and D) might be the same. Their Jaccard values are equal. Addressing this limitation could pave the way for a plugin like ClueGO in Cytoscape. While ClueGO can handle such cases, it requires a license, and its licensing page has become inaccessible.
 PPI%2Bcoexpression_example2.png
