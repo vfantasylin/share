@@ -23,4 +23,4 @@ Here it something I hope to help you solve~
 Dashed lines (--) for PPI.
 Dotted lines (:) for co-expression.
 Solid lines (——) for combined PPI and co-expression.
-[PPI_coexpression_example5.png](https://github.com/vfantasylin/share/blob/main/PPI_coexpression_example/PPI_coexpression_example5.png)
+[PPI_coexpression_example5.png](https://github.com/vfantasylin/share/blob/main/PPI_coexpression_example/PPI_coexpresssion_example5.png)
